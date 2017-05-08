@@ -11,3 +11,10 @@ class NewsViewSet(viewsets.ModelViewSet):
     serializer_class = NewsSerializer
 
 
+class FilteredList(generics.ListAPIView):
+    queryset = NewsEntry.objects.all()
+    serializer_class = NewsSerializer
+
+    def get_queryset(self):
+        site = self.kwargs['site']
+        return NewsViewSet.objects.filter(site=site)
