@@ -13,5 +13,6 @@ to start project , type in terminal:
 
   ./manage.py runserver
 
-Go to URL - localhost:8000
+Go to URL - localhost:8000 to see the list of parsed posts
+
 API - localhost:8000/api/
