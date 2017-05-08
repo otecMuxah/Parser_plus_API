@@ -3,7 +3,7 @@ from site_reader.views import get_links_from_nav, iterate_pages ,BASE_URL
 
 
 def index(request):
-    counter = 10
+    counter = 100
     news_list = []
     pages_href_list = get_links_from_nav()
     for page in pages_href_list:
