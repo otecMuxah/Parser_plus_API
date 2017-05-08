@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello NIX</title>
+</head>
+<body>
+<style>
+    .table {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .table__row {
+        display: flex;
+        border-bottom: 1px solid #aeaeae;
+    }
+    .table__cell {
+        flex: 0 1 25%;
+        padding: 10px;
+        word-break: break-all;
+    }
+</style>
+    <h1>Hello NIX</h1>
+    <div class="table">
+        <div class="table__row">
+            <div class="table__cell">Title</div>
+            <div class="table__cell">Author</div>
+            <div class="table__cell">URL</div>
+            <div class="table__cell">Site</div>
+        </div>
+        {% for item in news_list %}
+        <div class="table__row">
+            <div class="table__cell">{{ item.number }}</div>
+            <div class="table__cell">{{ item.title }}</div>
+            <div class="table__cell">{{ item.author }}</div>
+            <div class="table__cell"><a href="{{ item.url }}">{{ item.url }}</a></div>
+            <div class="table__cell">{{ item.site }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
