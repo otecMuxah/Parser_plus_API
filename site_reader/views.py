@@ -26,8 +26,8 @@ def iterate_pages(url, counter):
         if counter == 0:
             break
         counter -= 1
-        print('Counter {}'.format(counter))
-        print('PARSING PAGE #{}'.format(page))
+        print('PAGES LEFT {}'.format(counter))
+
 
         response = urllib.request.urlopen(url)
         soup = BeautifulSoup(response, "lxml")
@@ -58,7 +58,6 @@ def iterate_pages(url, counter):
                                url=str(news_entry['url']),
                                site=str(news_entry['site']))
                 q.save()
-                print(news_entry)
                 result.append(news_entry)
 
         news_list.extend(result)

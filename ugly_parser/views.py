@@ -2,11 +2,8 @@ from django.shortcuts import render
 from site_reader.views import get_links_from_nav, iterate_pages ,BASE_URL
 
 
-
-
-
 def index(request):
-    counter = 3
+    counter = 10
     news_list = []
     pages_href_list = get_links_from_nav()
     for page in pages_href_list:
