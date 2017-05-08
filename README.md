@@ -1,12 +1,17 @@
 # Parser_plus_API
 test task
 
-to start project , type in terminal
+to start project , type in terminal:
 
-virtualenv -p python3 venv
+  virtualenv -p python3 venv
 
-source venv/bin/activate
+  source venv/bin/activate
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
-./manage.py runserver
+  ./manage.py migrate
+
+  ./manage.py runserver
+
+Go to URL - localhost:8000
+API - localhost:8000/api/
